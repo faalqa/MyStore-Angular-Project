@@ -1,0 +1,2 @@
+<h1>List of Products</h1>
+<app-product-item *ngFor="let product of productList" [product]="product" (hideProduct)="hideProductFunc($event)"></app-product-item>

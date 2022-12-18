@@ -1,0 +1,4 @@
+<h1>Cart</h1>
+<p *ngIf="cart?.length == 0">Your Cart is Empty!</p>
+<app-product-item *ngFor="let product of cart" [product]="product"></app-product-item>
+<button (click)="clearCart()">Clear Cart</button>
