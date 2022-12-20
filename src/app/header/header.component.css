@@ -1,0 +1,9 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    background: #d5b8ff;
+    color: #ffffff;
+    padding: 20px 200px 20px 200px;
+}

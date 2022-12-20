@@ -1,0 +1,10 @@
+<form (ngSubmit)="submitForm()">
+    <h3>Payment Information</h3>
+    <input type="text" name="name" placeholder="Enter Your Full Name" [(ngModel)]="name">
+    <br>
+    <input type="text" name="address" placeholder="Enter Your Address" [(ngModel)]="address">
+    <br>
+    <input type="text" name="cardNumber" placeholder="Enter Your Card Number" [(ngModel)]="cardNumber">
+    <br>
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
