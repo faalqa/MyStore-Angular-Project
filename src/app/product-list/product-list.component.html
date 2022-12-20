@@ -1,5 +1,10 @@
 <h1>List of Products</h1>
 <div fxLayout="row" fxLayoutAlign="space-between">
-    <app-product-item *ngFor="let product of productList" [product]="product" (hideProduct)="hideProductFunc($event)"></app-product-item>
+    <div *ngFor="let product of productList">
+        <app-product-item  [product]="product" (hideProduct)="hideProductFunc($event)"></app-product-item>
+        <!-- <button class="btn btn-primary" style="margin-right: 10px;" (click)="goToProduct(product)">Show Product</button> -->
+        <!-- <button class="btn btn-primary" style="margin-right: 10px;" (click)="addToCart(product)">Add To Cart</button> -->
+    </div>
 </div>
+
 

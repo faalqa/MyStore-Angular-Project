@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import { FormsModule } from '@angular/forms';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ConfirmationPageComponent } from './confirmation-page/confirmation-page
     ProductItemComponent,
     CartComponent,
     PaymentFormComponent,
-    ConfirmationPageComponent
+    ConfirmationPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

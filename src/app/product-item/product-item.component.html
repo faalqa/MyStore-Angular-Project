@@ -1,11 +1,15 @@
 <div style="margin-bottom: 40px;">
-    <h4>{{ product.name }}</h4>
-    <p>Price: {{ product.price }} SAR</p>
-    <p>Quantity: {{ product.quantity }}</p>
+    <div (click)="goToProduct(product)">
+        <h4>{{ product.name }}</h4>
+        <p>Price: {{ product.price }} SAR</p>
+        <p>Quantity: {{ product.quantity }}</p>
+    </div>
+    
     <button class="btn btn-primary" style="margin-right: 10px;" (click)="increase(product)">+</button>
     <button class="btn btn-primary" style="margin-right: 10px;" (click)="decrease(product)">-</button>
     <button class="btn btn-primary" style="margin-right: 10px;" (click)="addToCart(product)">Add To Cart</button>
     <!-- <p (click)="hide(product)">HIDE</p> -->
-    <br>
+    <!-- <br>
+    <button class="btn btn-primary" style="margin-right: 10px;" (click)="goToProduct(product)">Show Product</button> -->
 </div>
 

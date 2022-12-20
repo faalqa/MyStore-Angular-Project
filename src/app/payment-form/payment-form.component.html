@@ -1,5 +1,7 @@
 <form (ngSubmit)="submitForm()">
     <h3>Payment Information</h3>
+    <h4>Total Amount: {{ amount }} SAR</h4>
+    <br>
     <input type="text" name="name" placeholder="Enter Your Full Name" [(ngModel)]="name">
     <br>
     <input type="text" name="address" placeholder="Enter Your Address" [(ngModel)]="address">

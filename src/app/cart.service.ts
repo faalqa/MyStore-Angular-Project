@@ -7,6 +7,7 @@ import { Product } from './models/Product';
 export class CartService {
 
   cartItems: Product[] = [];
+  totalAmount: number = 0;
 
   constructor() { }
 
@@ -21,6 +22,15 @@ export class CartService {
 
   clearCart() {
     this.cartItems = [];
+    this.totalAmount = 0;
     return this.cartItems;
+  }
+
+  getTotalAmount() {
+    this.totalAmount = 0;
+    this.cartItems.forEach(element => {
+      this.totalAmount += (element.price * element.quantity);
+    });
+    return this.totalAmount;
   }
 }

@@ -13,9 +13,10 @@ export class PaymentInformationService {
     return this.payment;
   }
 
-  setPaymentInformation(name: string, address: string, cardNumber:string) {
+  setPaymentInformation(name: string, address: string, cardNumber:string, amount: number) {
     this.payment.setName(name);
     this.payment.setAddress(address);
     this.payment.setCardNumber(cardNumber);
+    this.payment.setAmount(amount);
   }
 }

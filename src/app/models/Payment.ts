@@ -3,12 +3,14 @@ export class Payment {
     name: string;
     address: string;
     cardNumber: string;
+    amount: number;
   
     constructor() {
         this.id = 0;
         this.name = '';
         this.address = '';
         this.cardNumber = '';
+        this.amount = 0;
     }
 
     setID(id: number) {
@@ -25,5 +27,9 @@ export class Payment {
 
     setCardNumber(cardNumber: string) {
         this.cardNumber = cardNumber;
+    }
+
+    setAmount(amount: number) {
+        this.amount = amount;
     }
 }
