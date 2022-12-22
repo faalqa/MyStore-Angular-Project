@@ -3,7 +3,7 @@
     width: 290px;
     padding: 20px;
     margin: 6px 6px;        
-    border: 1px solid #33B5E5;
+    border: 1px solid #d5b8ff;
 } 
 
 .product-container {
@@ -15,9 +15,10 @@
     justify-content: flex-start;
 }
 
-.select-input {
-    width: 108px; 
-    margin-bottom: 8px;
+.mauve {
+    background-color:#d5b8ff;
+    border-color: #d5b8ff;
+    font-weight: 900;
 }
 
 .clickable {

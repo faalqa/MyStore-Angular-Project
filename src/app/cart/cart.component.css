@@ -23,7 +23,7 @@ img {
 }
 
 .number-input {
-    width: 80px;
+    width: 400px;
     text-align: center;
 }
 
@@ -34,13 +34,14 @@ img {
     margin-top: 64px;
 }
 
-.cart-panel {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
 .empty-cart-message {
     display: flex;
     justify-content: center;
     margin-top: 64px;
+}
+
+.mauve {
+    background-color:#d5b8ff;
+    border-color: #d5b8ff;
+    font-weight: 900;
 }

@@ -8,29 +8,28 @@
                 <p>Price: {{ product.price }} SAR</p>
                 <div style="flex-direction: row;">
                     <p>Quantity: {{ product.quantity }}</p>
-                    <button class="btn btn-primary" style="margin-right: 10px;" [disabled]="product.quantity == 10" (click)="increase(product)">+</button>
-                    <button class="btn btn-primary" style="margin-right: 10px;" (click)="decrease(product)">-</button>
+                    <button class="btn btn-primary mauve" style="margin-right: 10px;" [disabled]="product.quantity == 10" (click)="increase(product)">+</button>
+                    <button class="btn btn-primary mauve" style="margin-right: 10px;" (click)="decrease(product)">-</button>
                 </div>
             </div>
-            
         </div>
     </div>
 
     <div *ngIf="cart?.length">
         <h4>Total Amount: {{ amount | number:'1.2-2' }} SAR</h4>
         <br>
-        <button class="btn btn-primary" style="margin-right: 10px;" (click)="clearCart()">Clear Cart</button>
+        <button class="btn btn-primary mauve" style="margin-right: 10px;" (click)="clearCart()">Clear Cart</button>
 
         <form class="form-margin" #form="ngForm" (ngSubmit)="submitForm()">
             <h3>Payment Information</h3>
             <br>
-            <input type="text" name="name" required minlength="3" maxlength="32" placeholder="Enter Your Full Name" [(ngModel)]="name">
+            <input type="text" name="name" class="number-input" required minlength="3" maxlength="32" placeholder="Enter Your Full Name - minimum 3 characters" [(ngModel)]="name">
             <br>
-            <input type="text" name="address" required minlength="6" maxlength="32" placeholder="Enter Your Address" [(ngModel)]="address">
+            <input type="text" name="address" class="number-input" required minlength="6" maxlength="32" placeholder="Enter Your Address - minimum 6 characters" [(ngModel)]="address">
             <br>
-            <input type="text" name="cardNumber" required minlength="16" maxlength="16" placeholder="Enter Your Card Number" [(ngModel)]="cardNumber">
+            <input type="text" name="cardNumber" class="number-input" required minlength="16" maxlength="16" placeholder="Enter Your Card Number - 16-digit" [(ngModel)]="cardNumber">
             <br>
-            <input type="submit" value="Submit" [disabled]="form.invalid" class="btn btn-primary" style="margin-top: 10px;">
+            <input type="submit" value="Submit" [disabled]="form.invalid" class="btn btn-primary mauve" style="margin-top: 10px;">
         </form>
     </div>
 </div>

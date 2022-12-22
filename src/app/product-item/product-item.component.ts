@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../models/Product';
 import { CartService } from '../cart.service';
 import { ShowProductService } from '../show-product.service';
@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class ProductItemComponent implements OnInit {
 
   @Input() product: Product;
-  @Output() hideProduct: EventEmitter<Product> = new EventEmitter;
   currentProduct: Product = new Product;
 
   constructor(private cartService: CartService, private showProductService: ShowProductService, private router: Router) {
@@ -39,11 +38,6 @@ export class ProductItemComponent implements OnInit {
     if (product.quantity > 1) {
       product.quantity -= 1;
     }
-    return product;
-  }
-
-  hide(product: Product) {
-    this.hideProduct.emit(product);
     return product;
   }
 

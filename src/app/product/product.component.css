@@ -3,11 +3,6 @@ img {
     width: 300px;
 }
 
-.select-input {
-    width: 108px; 
-    margin-bottom: 8px;
-}
-
 .detail-container {
     display: flex;
     justify-content: center;
@@ -20,6 +15,8 @@ img {
     margin-right: 128px;
 }
 
-.back-link {
-    margin-top: 8px;
+.mauve {
+    background-color:#d5b8ff;
+    border-color: #d5b8ff;
+    font-weight: 900;
 }

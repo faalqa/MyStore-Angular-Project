@@ -60,17 +60,10 @@ export class CartComponent implements OnInit {
     // set payment information
     this.paymentInformationService.setPaymentInformation(this.name, this.address, this.cardNumber, this.amount);
 
-    // save order
-
     // clear cart
     this.cartService.clearCart();
     this.cart = [];
     this.amount = 0;
-
-    // clear form
-    // this.name = '';
-    // this.address = '';
-    // this.cardNumber = '';
 
     // route to confirmation page
     this.router.navigate(['/confirmation']);

@@ -1,6 +1,8 @@
 <h2>List of Products</h2>
-<div class="product-index">
-    <div *ngFor="let product of productList" class="product-container">
-        <app-product-item  [product]="product" (hideProduct)="hideProductFunc($event)"></app-product-item>
-    </div>
+<div class="product-list">
+    <div class="product-index">
+        <div *ngFor="let product of productList" class="product-container">
+            <app-product-item  [product]="product"></app-product-item>
+        </div>
+    </div>  
 </div>
