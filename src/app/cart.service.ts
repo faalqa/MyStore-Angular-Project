@@ -20,6 +20,11 @@ export class CartService {
     return this.cartItems;
   }
 
+  removeProduct(product: Product) {
+    this.cartItems = this.cartItems.filter(p => p.id !== product.id);
+    return this.cartItems;
+  }
+
   clearCart() {
     this.cartItems = [];
     this.totalAmount = 0;

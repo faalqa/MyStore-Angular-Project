@@ -44,7 +44,16 @@ export class CartComponent implements OnInit {
       product.quantity -= 1;
       this.amount -= product.price;
     }
+    else if (product.quantity == 1) {
+      this.removeProduct(product);
+    }
     return product;
+  }
+
+  removeProduct(product: Product) {
+    this.cart = this.cartService.removeProduct(product);
+    this.amount -= product.price;
+    alert('Product ' + product.name + ' is removed from your cart');
   }
 
   submitForm() {

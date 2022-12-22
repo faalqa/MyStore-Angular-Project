@@ -7,3 +7,16 @@
     color: #ffffff;
     padding: 20px 200px 20px 200px;
 }
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+}
+
+a {
+    color: #ffffff;
+}
