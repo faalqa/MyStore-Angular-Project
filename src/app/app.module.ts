@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ConfirmationPageComponent } from './confirmation-page/confirmation-page.component';
 import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaymentFormComponent } from './payment-form/payment-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductItemComponent,
     CartComponent,
     ConfirmationPageComponent,
-    ProductComponent
+    ProductComponent,
+    PaymentFormComponent
   ],
   imports: [
     BrowserModule,

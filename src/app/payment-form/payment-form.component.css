@@ -1,0 +1,19 @@
+.form-margin {
+    margin-top: 60px;
+    margin-bottom: 12px;
+}
+
+.number-input {
+    width: 400px;
+    text-align: center;
+}
+
+.mauve {
+    background-color:#d5b8ff;
+    border-color: #d5b8ff;
+    font-weight: 900;
+}
+
+.error-message {
+    color: red;
+}

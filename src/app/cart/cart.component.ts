@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../models/Product';
+import { Payment } from '../models/Payment';
 import { PaymentInformationService } from '../payment-information.service';
 import { Router } from '@angular/router';
 
@@ -12,9 +13,6 @@ import { Router } from '@angular/router';
 export class CartComponent implements OnInit {
 
   cart: Product[] = [];
-  name: string = '';
-  address: string = '';
-  cardNumber: string = '';
   amount: number = 0;
 
   constructor(private cartService: CartService, private router: Router, private paymentInformationService: PaymentInformationService) {}
@@ -56,9 +54,10 @@ export class CartComponent implements OnInit {
     alert('Product ' + product.name + ' is removed from your cart');
   }
 
-  submitForm() {
+  pay(payment: Payment) {
     // set payment information
-    this.paymentInformationService.setPaymentInformation(this.name, this.address, this.cardNumber, this.amount);
+    payment.setAmount(this.amount)
+    this.paymentInformationService.setPayment(payment);
 
     // clear cart
     this.cartService.clearCart();
@@ -67,7 +66,5 @@ export class CartComponent implements OnInit {
 
     // route to confirmation page
     this.router.navigate(['/confirmation']);
-
   }
-
 }

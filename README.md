@@ -21,7 +21,7 @@ Add products to your cart
 
 Click on `Cart` from the page header to view your cart
 
-Increase the quantity of product to Zero to remove the product from your cart
+Decrease the quantity of product to Zero to remove the product from your cart
 
 Click `Clear Cart` to demove All Product
 

@@ -19,4 +19,8 @@ export class PaymentInformationService {
     this.payment.setCardNumber(cardNumber);
     this.payment.setAmount(amount);
   }
+
+  setPayment(payment: Payment) {
+    this.payment = payment;
+  }
 }

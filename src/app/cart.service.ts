@@ -16,7 +16,14 @@ export class CartService {
   }
 
   addToCart(product: Product) {
-    this.cartItems.push(product);
+    const find = this.cartItems.findIndex(p => p.id == product.id)
+    if (find >= 0) {
+      // add to quantity
+      this.cartItems[find].quantity += product.quantity;
+    } else {
+      this.cartItems.push(product);
+    }
+    // this.cartItems.push(product);
     return this.cartItems;
   }
 

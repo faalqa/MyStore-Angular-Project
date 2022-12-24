@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/Product';
-import { HttpClient } from '@angular/common/http';
+import { ProductDataService } from '../product-data.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,12 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductListComponent implements OnInit {
 
-  productList: Product[] = []
+  productList: Product[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private productDataService: ProductDataService) {}
 
   ngOnInit(): void {
-    this.http.get<Product[]>('../../assets/data.json').subscribe((res) => {
+    this.productDataService.getData().subscribe((res) => {
       this.productList = res;
     });
   }
