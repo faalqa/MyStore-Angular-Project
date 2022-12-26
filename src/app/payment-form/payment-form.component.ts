@@ -64,6 +64,8 @@ export class PaymentFormComponent {
     //card number
     if (this.paymentData.cardNumber == '') {
       this.cardErr = 'Card Number can\'t be empty';
+    } else if (!/^\d+$/.test(this.paymentData.cardNumber)) {
+      this.cardErr = 'Card Number should contain only numbers';
     } else if (this.paymentData.cardNumber.length < 16) {
       this.cardErr = 'Card Number should be 16 characters';
     } else {

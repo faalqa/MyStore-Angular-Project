@@ -5,7 +5,7 @@
     <br><span class="error-message">{{ nameErr }}</span><br>
     <input type="text" name="address" [(ngModel)]="paymentData.address" (ngModelChange)="addressValidate()" class="number-input" required minlength="6" maxlength="32" placeholder="Enter Your Address - minimum 6 characters">
     <br><span class="error-message">{{ addressErr }}</span><br>
-    <input type="text" name="cardNumber" [(ngModel)]="paymentData.cardNumber" (ngModelChange)="cardNumberValidate()" class="number-input" required minlength="16" maxlength="16" placeholder="Enter Your Card Number - 16-digit">
+    <input type="text" name="cardNumber" [(ngModel)]="paymentData.cardNumber" (ngModelChange)="cardNumberValidate()" pattern="[0-9]{16}" class="number-input" required minlength="16" maxlength="16" placeholder="Enter Your Card Number - 16-digit">
     <br><span class="error-message">{{ cardErr }}</span><br>
     <input type="submit" value="Submit" [disabled]="form.invalid" class="btn btn-primary mauve" style="margin-top: 10px;">
 </form>
